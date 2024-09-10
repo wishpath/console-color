@@ -3,6 +3,7 @@ package org.sa.console;
 import java.awt.*;
 import java.util.List;
 
+//projects: haiku-compressor
 public class Print {
   private static final List<String> gradientColors = new ColorGradientCalculator().generateGradient(new Color(0, 153, 153), Color.YELLOW, Color.RED, 8);
 
