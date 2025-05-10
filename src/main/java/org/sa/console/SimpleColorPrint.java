@@ -8,7 +8,7 @@ public class SimpleColorPrint {
   public static void red(String s) { color(s, Colors.RED); }
   public static void color(String s, String colorCode) { System.out.println(colorCode + s + Colors.RESET); }
 
-
+  public static void redInLine(String s) { colorInLine(s, Colors.RED); }
   public static void blueInLine(String s) { colorInLine(s, Colors.BLUE); }
   public static void colorInLine(String s, String colorCode) { System.out.print(colorCode + s + Colors.RESET); }
 }
