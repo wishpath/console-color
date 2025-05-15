@@ -1,8 +1,9 @@
 package org.sa.console;
 
-//projects: words-sorter
+//projects: words-sorter, one-liners
 public class SimpleColorPrint {
   public static void normal(String s) { System.out.println(s); }
+  public static void normalInLine(String s) { System.out.println(s); }
   public static void blue(String s) { color(s, Colors.BLUE); }
   public static void yellow(String s) { color(s, Colors.YELLOW); }
   public static void red(String s) { color(s, Colors.RED); }
