@@ -1,5 +1,6 @@
 package org.sa.console;
 
+//projects: one-liners
 public class ColoredString {
 
   public static String red(String s) {

@@ -1,0 +1,76 @@
+[alias]
+    a = "!f() { \
+        git add . && \
+        git reset -- \
+            ui-test/config/fluentlenium.properties && \
+        git status; \
+    }; f"
+
+    c = "!f() { \
+        branch=$(git rev-parse --abbrev-ref HEAD) && \
+        message=\"$branch: $1\" && \
+        git commit -m \"$message\" && \
+        git status; \
+    }; f"
+
+    p = "!f() { \
+        branch=$(git rev-parse --abbrev-ref HEAD) && \
+        git push origin \"$branch\" && \
+        git status; \
+    }; f"
+
+    done = "!f() { \
+        git a && \
+        git c \"$1\" && \
+        git p; \
+    }; f"
+
+    acp = "!f() { \
+        git a && \
+        git c \"$1\" && \
+        git p; \
+    }; f"
+
+    ac = "!f() { \
+        git a && \
+        git c \"$1\"; \
+    }; f"
+
+    tomorrow = "!f() { \
+        git checkout master && \
+        git pull && \
+        tomorrow_branch=$(date -d 'tomorrow' +'%Y%m%d') && \
+        git checkout -b $tomorrow_branch && \
+        git status; \
+    }; f"
+
+    # Alias to merge the remote branch (same name as the current local branch)
+    # into the remote master branch
+    # Steps:
+    # 1. Fetch the latest changes from the remote repository
+    # 2. Get the name of the current local branch
+    # 3. Checkout the remote master branch locally
+    # 4. Merge the remote branch (same name as the current local branch) into the remote master branch locally
+    # 5. Push the changes to the remote master branch
+    omerge = "!f() { \
+        branch=$(git rev-parse --abbrev-ref HEAD) && \
+        git fetch origin && \
+        if git show-ref --verify --quiet refs/heads/temp-master; then \
+            git branch -D temp-master; \
+        fi && \
+        git checkout -b temp-master origin/master && \
+        git merge origin/\"$branch\" && \
+        git push origin temp-master:master && \
+        git checkout master && \
+        git branch -D temp-master; \
+    }; f"
+
+    routine = "!f() { \
+        git done \"$1\" && \
+        git omerge && \
+        git tomorrow; \
+    }; f"
+
+    current = "!f() { \
+        git rev-parse --abbrev-ref HEAD; \
+    }; f"
