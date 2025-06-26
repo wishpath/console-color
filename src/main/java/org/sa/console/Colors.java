@@ -39,6 +39,13 @@ public class Colors {
   public static final String BRIGHT_CYAN = "\u001B[96m";
   public static final String BRIGHT_WHITE = "\u001B[97m";
 
+  // Very Bright Grays
+  public static final String VERY_BRIGHT_GRAY_1 = "\u001B[38;5;250m"; // Slightly dimmer bright gray
+  public static final String VERY_BRIGHT_GRAY_2 = "\u001B[38;5;251m"; // Medium bright gray
+  public static final String VERY_BRIGHT_GRAY_3 = "\u001B[38;5;252m"; // Bright gray
+  public static final String VERY_BRIGHT_GRAY_4 = "\u001B[38;5;253m"; // Very bright gray
+  public static final String VERY_BRIGHT_GRAY_5 = "\u001B[38;5;254m"; // Very very bright gray
+
   // Background Colors
   public static final String BG_BLACK = "\u001B[40m";
   public static final String BG_RED = "\u001B[41m";
