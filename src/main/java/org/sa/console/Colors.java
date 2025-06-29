@@ -68,7 +68,6 @@ public class Colors {
   public static final String BG_BRIGHT_WHITE = "\u001B[107m";
 
 
-
   public static final String YELLOW_GREEN = "\u001B[38;5;154m";
   public static final String SLIGHTLY_YELLOWISH_GREEN = "\u001B[38;2;173;255;47m";
   public static final String SLIGHTLY_GREENISH_YELLOW = "\u001B[38;2;225;255;128m";

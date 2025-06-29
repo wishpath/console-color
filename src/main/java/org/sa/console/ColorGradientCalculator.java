@@ -8,6 +8,8 @@ import java.util.stream.Stream;
 
 import static org.sa.console.Colors.getANSIEscapeColour;
 
+
+//for ANSI Escape color
 public class ColorGradientCalculator {
 
   public List<String> generateGradient(Color startColor, Color endColor, int stepCount) {
