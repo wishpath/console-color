@@ -11,5 +11,6 @@ public class SimpleColorPrint {
 
   public static void redInLine(String s) { colorInLine(s, Colors.RED); }
   public static void blueInLine(String s) { colorInLine(s, Colors.BLUE); }
+  public static void yellowInLine(String s) { colorInLine(s, Colors.YELLOW); }
   public static void colorInLine(String s, String colorCode) { System.out.print(colorCode + s + Colors.RESET); }
 }
